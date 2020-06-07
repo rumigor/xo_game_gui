@@ -15,12 +15,17 @@ public class BattleMap extends JPanel {
     private int cellWidth;
     private boolean isInit = false;
     protected static char dot = 'X';
-    public static JLabel label = new JLabel();
+    protected static JLabel label = new JLabel();
+    private JLabel background;
+
 
     public BattleMap(GameWindow gameWindow) {
         this.gameWindow = gameWindow;
         this.add(label);
         this.setBackground(Color.ORANGE);
+        background = new JLabel(new ImageIcon("C:\\Users\\rumig\\Documents\\java\\xo_game_gui\\src\\xo_game\\background.jpg"));
+        this.add(background, BorderLayout.WEST);
+        background.setVisible(true);
         this.addMouseListener(new MouseAdapter() {
             public void mouseReleased(MouseEvent e) {
                 if (BattleMap.this.isInit) {
@@ -221,6 +226,7 @@ public class BattleMap extends JPanel {
         this.fieldSizeY = fieldSizeY;
         this.dotsToWin = dotsToWin;
         this.isInit = true;
+        background.setVisible(false);
         this.repaint();
     }
 

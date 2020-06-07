@@ -30,6 +30,7 @@ public class GameWindow extends JFrame {
         });
         buttonStartNewGame.addActionListener((e) -> {
             this.settingsWindow.setVisible(true);
+
         });
         this.add(panel, "South");
 
