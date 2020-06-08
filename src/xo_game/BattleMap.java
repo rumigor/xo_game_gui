@@ -10,7 +10,7 @@ public class BattleMap extends JPanel {
     private int gameMode;
     private int fieldSizeX;
     private int fieldSizeY;
-    private int dotsToWin;
+    protected int dotsToWin;
     private int cellHeight;
     private int cellWidth;
     private boolean isInit = false;
@@ -23,7 +23,7 @@ public class BattleMap extends JPanel {
         this.gameWindow = gameWindow;
         this.add(label);
         this.setBackground(Color.ORANGE);
-        background = new JLabel(new ImageIcon("C:\\Users\\rumig\\Documents\\java\\xo_game_gui\\src\\xo_game\\background.jpg"));
+        background = new JLabel(new ImageIcon("background.jpg"));
         this.add(background, BorderLayout.WEST);
         background.setVisible(true);
         this.addMouseListener(new MouseAdapter() {
